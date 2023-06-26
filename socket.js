@@ -7,6 +7,8 @@ const io = require("socket.io")(port, {
   },
 });
 
+//FUNCTIONS USED BY SOCKET LISTENERS TO UPDATE ONLINE USERS ARRAY
+
 let onlineUsers = [];
 
 //add user to onlineUsers array when connected
@@ -25,10 +27,13 @@ const getUser = (userId) => {
   return onlineUsers.find((user) => user.userId === userId);
 };
 
+//LISTENERS AND EMMITTERS
+
+// Handle client connections
 io.on("connection", (socket) => {
   console.log("a user connected");
 
-  //get userId and socketId from user and add to the users array
+  //get userId and socketId from client and add user to the users array
   socket.on("addUser", (userId) => {
     addUser(userId, socket.id);
     io.emit("getOnlineUsers", onlineUsers);
@@ -60,15 +65,16 @@ io.on("connection", (socket) => {
     });
   });
 
-  //remove user from users array when disconnected
-  socket.on("disconnect", () => {
-    console.log("user disconnected");
+  //remove user from users array when logged out
+  socket.on("logout", () => {
+    console.log("user logged out");
     removeUser(socket.id);
     io.emit("getOnlineUsers", onlineUsers);
   });
 
-  socket.on("logout", () => {
-    console.log("user logged out");
+  //remove user from users array when disconnected
+  socket.on("disconnect", () => {
+    console.log("user disconnected");
     removeUser(socket.id);
     io.emit("getOnlineUsers", onlineUsers);
   });
