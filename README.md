@@ -65,7 +65,7 @@ npm start
 ```
 - Using yarn:
 ```
-Using npm:
+yarn start:
 ```
 The server will be running at `http://localhost:8080` by default, or you can specify a different port if needed
 in `socket.js` file.
