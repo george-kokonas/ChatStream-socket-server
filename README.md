@@ -22,10 +22,12 @@ To run the socket server locally, you need to have the following installed on yo
 - Node.js (version >= 14)
 - npm (Node Package Manager)
 
+If you don't have Node.js or npm installed, you can visit the [Node.js](https://nodejs.org/) website for further guidance on installation.
+
 ## Dependencies
-The following dependencies are required for this project:
-- dotenv (^16.0.3)
-- socket.io (^4.6.1)
+The following dependencies are required for running the socket server:
+- [dotenv](https://www.npmjs.com/package/dotenv): A module for loading environment variables from a .env file into process.env, simplifying configuration management. 
+- [Socket.IO](https://socket.io/) (^4.6.1) : a JavaScript library that enables real-time, bidirectional communication between clients and servers. Socket.IO simplifies the process of building real-time applications, such as chat systems, gaming platforms, collaborative tools, and live dashboards. It offers features like event-based communication, room-based messaging, and automatic reconnection.
 
 ## Installation
 Clone the repository:
