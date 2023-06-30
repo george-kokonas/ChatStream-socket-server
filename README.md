@@ -4,8 +4,8 @@ This repository contains the socket server for ChatStream, a real time chat Appl
 
 ## Project Overview
 This repository is part of a larger project that includes the following components as well:
-- [Express Server](git@github.com:george-kokonas/ChatStream-express-server.git): The Express server component handles API requests and database operations for the ChatStream application, including authorization-authentication.
-- [React Client](git@github.com:george-kokonas/ChatStream-react-client.git): The React client component provides the user interface for ChatStream, allowing users to interact with the application.
+- [Express Server](https://github.com/george-kokonas/ChatStream-express-server): The Express server component handles API requests and database operations for the ChatStream application, including authorization-authentication.
+- [React Client](https://github.com/george-kokonas/ChatStream-react-client): The React client component provides the user interface for ChatStream, allowing users to interact with the application.
 
 You can explore these repositories to learn more about the other components of the project.
 
