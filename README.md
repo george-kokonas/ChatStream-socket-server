@@ -9,7 +9,9 @@ This repository is part of a larger project that includes the following componen
 
 You can explore these repositories to learn more about the other components of the project.
 
-Click [here](https://chatstream.netlify.app) to see ChatStream running!
+Click [here](https://chatstream.netlify.app) to see ChatStream deployed and running!
+
+***Please note that ChatStream is constantly evolving, with regular updates that bring new features, enhancements, and performance tweaks.***
 
 ## Features
 - Real-time messaging: Clients can send and receive messages in real time.
