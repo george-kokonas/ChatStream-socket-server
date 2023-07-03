@@ -31,7 +31,6 @@ const getUser = (userId) => {
 
 // Handle client connections
 io.on("connection", (socket) => {
-  console.log("a user connected");
 
   //get userId and socketId from client and add user to the users array
   socket.on("addUser", (userId) => {
@@ -67,14 +66,12 @@ io.on("connection", (socket) => {
 
   //remove user from users array when logged out
   socket.on("logout", () => {
-    console.log("user logged out");
     removeUser(socket.id);
     io.emit("getOnlineUsers", onlineUsers);
   });
 
   //remove user from users array when disconnected
   socket.on("disconnect", () => {
-    console.log("user disconnected");
     removeUser(socket.id);
     io.emit("getOnlineUsers", onlineUsers);
   });
